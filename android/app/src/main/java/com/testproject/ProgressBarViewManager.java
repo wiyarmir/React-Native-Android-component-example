@@ -6,8 +6,7 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-public class ProgressBarViewManager
-        extends SimpleViewManager<ProgressBar> {
+public class ProgressBarViewManager extends SimpleViewManager<ProgressBar> {
 
     public static final String REACT_CLASS = "ProgressBar";
 
@@ -17,8 +16,7 @@ public class ProgressBarViewManager
     }
 
     @Override
-    protected ProgressBar createViewInstance(
-            ThemedReactContext reactContext) {
+    protected ProgressBar createViewInstance(ThemedReactContext reactContext) {
         return new ProgressBar(reactContext);
     }
 
@@ -27,10 +25,8 @@ public class ProgressBarViewManager
         view.setProgress(progress);
     }
 
-    @ReactProp(name = "indeterminate",
-            defaultBoolean = false)
-    public void setIndeterminate(ProgressBar view,
-                                 boolean indeterminate) {
+    @ReactProp(name = "indeterminate", defaultBoolean = false)
+    public void setIndeterminate(ProgressBar view, boolean indeterminate) {
         view.setIndeterminate(indeterminate);
     }
 }
